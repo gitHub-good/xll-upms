@@ -1,0 +1,60 @@
+server:
+  port: 4001
+
+spring:
+  application:
+    name: pig-config-server
+  profiles:
+    active: dev
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/goodsX/pig-config.git
+          default-label: master   #解决监控down
+
+# 关闭安全管理
+management:
+  security:
+    enabled: false
+endpoints:
+  health:
+    sensitive: false
+---
+spring:
+  profiles: dev
+  rabbitmq:
+    host: 192.168.10.153
+    port: 5672
+    username: guest
+    password: guest
+eureka:
+  instance:
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 5
+    lease-expiration-duration-in-seconds: 20
+  client:
+    serviceUrl:
+      defaultZone: http://xll:gip6666@localhost:1025/eureka
+    registry-fetch-interval-seconds: 10
+---
+spring:
+  profiles: prd
+  rabbitmq:
+    host: 192.168.10.153
+    port: 5672
+    username: guest
+    password: guest
+  cloud:
+    config:
+      retry:
+        initial-interval: 3000
+        multiplier: 1.5
+        max-interval: 20000
+        max-attempts: 6
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: http://xll:gip6666@eureka:1025/eureka

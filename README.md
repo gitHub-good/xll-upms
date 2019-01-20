@@ -6,7 +6,7 @@
   <img src="https://img.shields.io/npm/l/vue.svg" alt="License">
 </p>  
 
-# Pig Microservice Architecture  
+# XLL Microservice Architecture  
 ---
 **基于Spring Cloud、OAuth2.0、Vue的前后端分离的权限管理系统**      
    

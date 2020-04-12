@@ -1,12 +1,4 @@
-<p align="center">
- <img src="https://img.shields.io/badge/Avue-1.5.4-green.svg" alt="Build Status">
-  <img src="https://img.shields.io/badge/Spring%20Cloud-EdgwareSR4-orange.svg" alt="Coverage Status">
-  <img src="https://img.shields.io/badge/Spring%20Boot-1.5.15-blue.svg" alt="Downloads">
-  <img src="https://img.shields.io/npm/v/npm.svg" alt="Version">
-  <img src="https://img.shields.io/npm/l/vue.svg" alt="License">
-</p>  
-
-# XLL Microservice Architecture  
+ # XLL Microservice Architecture  
 ---
 **基于Spring Cloud、OAuth2.0、Vue的前后端分离的权限管理系统**      
    
@@ -14,25 +6,6 @@
     <img src="http://a.pigx.top/pig架构图.png">
 </p>   
 
- ### 模块说明
-``` lua
-pig
-├── pig-ui -- element-vue-admin实现[8000]
-├── pig-auth -- 授权服务提供[3000]
-├── pig-common -- 系统公共模块 
-├── pig-config -- 配置中心[4001]
-├── pig-eureka -- 服务注册与发现[1025]
-├── pig-gateway -- ZUUL网关[9999]
-├── pig-modules -- 微服务模块
-├    ├── pig-daemon-service -- 分布式调度中心[4060]
-├    ├── pig-mc-service -- 消息中心[4050]
-├    ├── pig-sso-client-demo -- 单点登录客户端示例[4040]
-├    └── pig-upms-service -- 权限管理提供[4000]
-└── pig-visual  -- 图形化模块 
-     ├── pig-monitor -- 服务状态监控、turbine [5001]
-     ├── pig-zipkin-elk -- zipkin、ELK监控[5002、5601]
-     └── pig-cache-cloud -- 缓存管理、统一监控[5005]
-```
 ### 功能列表
 - 完善登录：账号密码模式、短信验证码模式、社交账号模式均整合Spring security oAuth
 - 单点登录：基于Srping security oAuth 提供单点登录接口，方便其他系统对接
@@ -58,52 +31,3 @@ pig
 - 分布式任务调度： 基于elastic-job的分布式任务，zookeeper做调度中心
 - zipkin链路追踪： 数据保存ELK，图形化展示
 - pinpoint链路追踪： 数据保存hbase，图形化展示
-
-### 问题反馈
-1. 欢迎提交 [ issue](https://gitee.com/log4j/pig/issues/new?issue%5Bassignee_id%5D=0&issue%5Bmilestone_id%5D=0)，请写清楚遇到问题的原因，浏览器和操作系统环境，重现的流程。 如果有开发能力，建议在本地调试出出错的代码。
-
-2. 不接受功能请求的issue，功能请求可能会被直接关闭，请谅解（正确的方式是打赏并附言）。  
-
-### 系统展示
-<table>
-    <tr>
-        <td><img src="https://oss.pigx.top/pic/201806/login.png"/></td>
-        <td><img src="https://oss.pigx.top/pic/201806/1.png"/></td>
-    </tr>
-    <tr>
-        <td><img src="https://oss.pigx.top/pic/201806/2.png"/></td>
-        <td><img src="https://oss.pigx.top/pic/201806/3.png"/></td>
-    </tr>
-    <tr>
-        <td><img src="https://oss.pigx.top/pic/201806/4.png"/></td>
-        <td><img src="https://oss.pigx.top/pic/201806/5.png"/></td>
-    </tr>
-    <tr>
-        <td><img src="https://oss.pigx.top/pic/201806/6.png"/></td>
-        <td><img src="https://oss.pigx.top/pic/201806/7.png"/></td>
-    </tr>
-    <tr>
-        <td><img src="https://oss.pigx.top/pic/201806/12321.png"/></td>
-        <td><img src="https://oss.pigx.top/pic/201806/WX20180522-182107@2x.png"/></td>
-    </tr>
-    <tr>
-        <td><img src="https://oss.pigx.top/pic/201806/8.png"/></td>
-        <td><img src="https://oss.pigx.top/pic/201806/9.png"/></td>
-    </tr>
-    <tr>
-        <td><img src="https://oss.pigx.top/pic/201806/10.png"/></td>
-        <td><img src="https://oss.pigx.top/pic/201806/11.png"/></td>
-    </tr>
-    <tr>
-        <td><img src="https://oss.pigx.top/pic/201806/12.png"/></td>
-        <td><img src="https://oss.pigx.top/pic/201806/13.png"/></td>
-    </tr>
-    <tr>
-        <td><img src="https://oss.pigx.top/pic/201806/14.png"/></td>
-        <td><img src="https://oss.pigx.top/pic/201806/15.png"/></td>
-    </tr>
-    <tr>
-        <td><img src="https://oss.pigx.top/pic/201806/16.png"/></td>
-        <td><img src="https://oss.pigx.top/pic/201806/17.png"/></td>
-    </tr>
-</table>
